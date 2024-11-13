@@ -86,7 +86,7 @@ public class AttrCheckUtil {
      * @author pyf
      */
     @SafeVarargs
-    public static <T> AttrCheckUtil buildWith(Object targetObject, FieldGetter<T>... fn) {
+    public static <T> AttrCheckUtil buildWith(T targetObject, FieldGetter<T>... fn) {
         List<String> fieldNames = new ArrayList<>();
         for (FieldGetter<T> tFieldGetter : fn) {
             String fieldName = convertToFieldName(tFieldGetter);
